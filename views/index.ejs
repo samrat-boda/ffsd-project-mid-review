@@ -33,12 +33,10 @@
 						alert(response.message);
 						if(response.status="success"){
 							document.getElementById("form-add-post").querySelector("input[name='image']").value="";
-							document.getElementById("form-add-post").querySelector("input[name='video']").value="";
-							// document.getElementById("form-add-post").querySelector("input[name='document']").value="";
+							document.getElementById("form-add-post").querySelector("input[name='video']").value="";		
 							document.getElementById("form-add-post").querySelector("textarea[name='caption']").value="";
 							document.getElementById("post-img-preview").style.display="none";
 							document.getElementById("post-video-preview").style.display="none";
-							//document.getElementById("post-file-preview").style.display="none";
                             showNewsfeed();
 						}
 					}
