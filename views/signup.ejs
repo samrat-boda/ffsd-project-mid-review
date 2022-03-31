@@ -66,7 +66,7 @@
 
 								Already have an account? <a href="/login"><span style="color: blue;">Login here</span></a>
 								<div class="submit-btns">
-									<button class="mtr-btn signup" name="submit" type="submit" onclick="return Validate()">
+									<button class="mtr-btn signup" name="submit" type="submit" id="register">
 										<span>Register</span>
 									</button>
 								</div>
@@ -79,6 +79,19 @@
 	</div>
     <script>
         function doRegister(form) {
+			const passPattern = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,}$/
+			const pass = document.getElementById("pass").value
+			
+			if(!passPattern.test(pass)){
+				alert('Enter password as per requirements')
+				return
+			}
+			
+			const confirmPassword = document.getElementById("confpass").value;
+			if (pass != confirmPassword) {
+				alert("Passwords do not match.");
+				return;
+			}
             form.submit.setAttribute("disabled", "disabled");
             form.submit.innerHTML = "<span>loading...</span>";
 
@@ -101,15 +114,9 @@
             ajax.send(new FormData(form));
             return false;
         }
-		function Validate() {
-        var password = document.getElementById("pass").value;
-        var confirmPassword = document.getElementById("confpass").value;
-        if (password != confirmPassword) {
-            alert("Passwords do not match.");
-            return false;
-        }
-        return true;
-    }
+
+		// document.getElementById("register").onclick = function(){
+		// }
     </script>
 </body>
 
