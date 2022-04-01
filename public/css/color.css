@@ -5,8 +5,6 @@
 .product-carousel .owl-nav .owl-next::before,
 .product-caro .owl-prev:hover:before,
 .product-caro .owl-next:hover:before,
-.log-reg-area form .forgot-pwd,
-.log-reg-area form .already-have,
 .log-reg-area > p a,
 .top-area > ul > li > a > span,
 .timeline-info > ul li a.active,
@@ -33,7 +31,6 @@
 .basics > li i,
 .education > li i,
 .groups > span i,
-a.forgot-pwd,
 .friend-meta > h4 a:hover,
 .x_title > h2,
 .post-meta .detail > span,
@@ -77,22 +74,17 @@ blockquote,
 .logout-meta > p a,
 .forum-list table tbody tr td i,
 .forum-list table tbody tr td a,
-.widget ul.recent-topics > li > i,
-.date-n-reply > a,
-.topic-data > span,
-.help-list > ul li a:hover,
-.employer-info h2,
-.job-detail > ul li i,
-.company-intro > a {
+.widget ul.recent-topics > li > i
+ {
   color: #088dcd;
 
 }
-svg {
+/* svg {
   stroke: #fff;
 }
 path.icon {
   fill: #fff;
-}
+} */
 
 /*=========================
 	BACKGROUND COLOR

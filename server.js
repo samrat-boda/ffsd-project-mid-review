@@ -247,15 +247,6 @@ http.listen(3000, function () {
                       }
                     );
                   });
-
-                  // Delete the file
-                  fileSystem.unlink(
-                    request.files.coverPhoto.path,
-                    function (err) {
-                      if (err) throw err;
-                      console.log("File deleted!");
-                    }
-                  );
                 }
               );
             } else {
@@ -330,15 +321,6 @@ http.listen(3000, function () {
                         }
                       );
                     });
-
-                    // Delete the file
-                    fileSystem.unlink(
-                      request.files.profileImage.path,
-                      function (err) {
-                        if (err) throw err;
-                        console.log("File deleted!");
-                      }
-                    );
                   }
                 );
               } else {
