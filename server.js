@@ -553,10 +553,6 @@ http.listen(3000, function () {
                         "type": "photo_liked",
                         "content": user.name + " has liked your post.",
                         "profileImage": user.profileImage,
-                        "isRead": false,
-                        "post": {
-                          "_id": post._id
-                        },
                         "createdAt": new Date().getTime()
                       }
                     }
@@ -650,7 +646,6 @@ http.listen(3000, function () {
                     "type": type,
                     "createdAt": createdAt,
                     "likers": [],
-                    // "comments": [],
                     "shares": [],
                     "user": {
                       "_id": user._id,
@@ -724,7 +719,7 @@ http.listen(3000, function () {
       }
       else
       {
-        var me=user;
+        var me=user;//saving user object in other variable and checking other account existence
         database.collection("users").findOne({
           "_id":ObjectId(_id)
         },function(error,user){
@@ -792,7 +787,7 @@ http.listen(3000, function () {
         }
         else
         {
-          var me=user;
+          var me=user; //saving user object in other variable and checking other account existence
           database.collection("users").findOne({
             "_id":ObjectId(_id)
           },function(error,user){
